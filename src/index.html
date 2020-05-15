@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File Management System</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/src/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="/src/index.css">
+</head>
+
+<body>
+
+    <h1>File Management System</h1>
+
+    <button id="logout" type="button">Logout</button><br>
+
+    <img id="previewImage" src="" alt="Image Preview" style="display: none;">
+    <textarea id="previewText" style="display: none;"></textarea>
+
+    <p id="currentPath"></p>
+    <button id="back" type="button"><</button> 
+
+    <button id="createFolder" type="button">Create Folder</button>
+    <div id="bigPopUp">
+        <div id="smallPopUp">
+            <span id="closePopUp">&times;</span>
+            <p>Create New Folder</p>
+            <input type="text" id="folderInput" name="folderInput"><br>
+            <button id="create" type="button">Create</button>
+        </div>
+    </div>
+
+    <input type="file" id="uploadFile" style="display: none;" multiple />
+    <input type="button" value="Upload File" onclick="document.getElementById('uploadFile').click();" />
+
+    <table id="fileTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</body>
+
+</html>
